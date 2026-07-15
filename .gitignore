@@ -1,0 +1,88 @@
+# Compiled output
+target/
+build/
+out/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE - IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Spring Boot
+*.log
+spring.log
+application-local.yml
+application-local.properties
+application-secrets.yml
+application-secrets.properties
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.jks
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Database
+*.db
+*.sqlite
+
+# Test / coverage
+coverage/
+.nyc_output/
+jacoco.exec
+
+# Node (if you have a React/Angular frontend module)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Misc
+*.class
+*.jar
+*.war
+*.ear
+*.tmp
+*.bak
+*.swp
+HELP.md
