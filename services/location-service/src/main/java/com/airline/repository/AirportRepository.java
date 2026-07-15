@@ -12,6 +12,6 @@ import java.util.List;
 public interface AirportRepository extends JpaRepository<Airport, Long> {
 
     boolean existsByIataCode(String iataCode);
-
+    
     List<Airport> findAllByCityId(Long cityId);
 }

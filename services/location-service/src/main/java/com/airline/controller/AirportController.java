@@ -2,7 +2,11 @@ package com.airline.controller;
 
 import com.airline.payload.request.AirportRequest;
 import com.airline.payload.request.AirportUpdateRequest;
+import com.airline.payload.request.BulkAirportRequest;
+import com.airline.payload.request.BulkCityRequest;
 import com.airline.payload.response.AirportResponse;
+import com.airline.payload.response.BulkAirportResponse;
+import com.airline.payload.response.BulkCityResponse;
 import com.airline.service.AirportService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +30,12 @@ public class AirportController {
     ) {
         AirportResponse airport = airportService.createAirport(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(airport);
+    }
+
+    @PostMapping("/bulk")
+    public ResponseEntity<BulkAirportResponse> creatAirportsBulk(@Valid @RequestBody BulkAirportRequest request) {
+        BulkAirportResponse response = airportService.createAirportsBulk(request.getAirports());
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @GetMapping
