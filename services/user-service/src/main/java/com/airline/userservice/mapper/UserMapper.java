@@ -1,6 +1,7 @@
 package com.airline.userservice.mapper;
 
 import com.airline.commonlib.dto.UserDTO;
+import com.airline.commonlib.enums.UserRole;
 import com.airline.commonlib.payload.request.auth.RegisterRequest;
 import com.airline.userservice.entity.User;
 import lombok.Getter;

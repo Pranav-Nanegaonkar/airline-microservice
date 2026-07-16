@@ -11,10 +11,10 @@ import lombok.*;
 @AllArgsConstructor
 public class LoginRequest {
 
-    @Email
-    @NotBlank
+    @Email(message = "Valid email is required")
+    @NotBlank(message = "Email is required")
     private String email;
 
-    @NotBlank
+    @NotBlank(message = "Password is required")
     private String password;
 }
