@@ -1,4 +1,4 @@
-package com.airline.locationservice.exception;
+package com.airline.commonlib.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
