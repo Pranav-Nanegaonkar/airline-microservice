@@ -47,10 +47,10 @@ public class GlobalExceptionHandler {
                 ));
 
         return ResponseEntity.badRequest().body(Map.of(
-                "status",    400,
-                "error",     "Validation Failed",
-                "messages",  errors,
-                "path",      req.getRequestURI(),
+                "status", 400,
+                "error", "Validation Failed",
+                "messages", errors,
+                "path", req.getRequestURI(),
                 "timestamp", LocalDateTime.now().toString()
         ));
     }
@@ -118,7 +118,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleGeneral(
             Exception ex, HttpServletRequest req) {
         return build(HttpStatus.INTERNAL_SERVER_ERROR,
-                "Something went wrong",
+                ex.getMessage(),
                 req.getRequestURI());
     }
 

@@ -15,7 +15,7 @@ public class UserMapper {
                 .email(request.getEmail())
                 .phone(request.getPhone())
                 .lastLogin(request.getLastLogin())
-                .role(request.getRole())
+                .role(request.getRole() == null ? UserRole.ROLE_USER : request.getRole())
                 .build();
     }
 
